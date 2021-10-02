@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import Articles from './Articles'
 import ArticlesContent from './Articles-contents'
+import CommentList from './CommentList'
 import NotFound from './NotFound'
+
 
 const Article = ({ match }) => {
     const name = match.params.name
@@ -37,6 +39,8 @@ const Article = ({ match }) => {
                     {paragraph}
                 </p>
             ))}
+            <hr />
+            <CommentList comments={articleInfo.comments} />
             <hr />
             <h1 className="sm:text-2x text-xl font-bold mt-4 mb-4 text-gray-900">Other Articles</h1>
 
