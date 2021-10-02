@@ -6,7 +6,7 @@ import Articles from './Articles'
 const ArticleList = () => {
     const article = articlesContent.map((article, index) => {
         return (
-            <Articles article={article} />
+            <Articles article={article} key={index} />
         )
     })
     // console.log(article)
